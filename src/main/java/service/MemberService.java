@@ -8,10 +8,14 @@ import java.util.Map;
 import org.springframework.stereotype.Service;
 
 import member.Address;
+import member.MemberInfo;
+import member.MemberModRequest;
+import member.MemberNotFoundException;
+import member.NotMatchPasswordException;
 
 
 
-//@Service
+@Service
 public class MemberService {
 
 	private int nextMemberId = 0;
