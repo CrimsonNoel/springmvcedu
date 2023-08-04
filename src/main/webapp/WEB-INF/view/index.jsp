@@ -22,8 +22,33 @@ spring start
 </ul>
 
 
+	<ul>
+	<li>@RequestMapping, @PathVariable:
+	<li><a href="<%=request.getContextPath() %>/member/regist">/member/regist</a>:
+	                              GET/POST 예, RegistrationController</li>
+	
+</ul>
 
 
 
 </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </html>
