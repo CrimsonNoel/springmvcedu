@@ -34,7 +34,7 @@ public class EventService {
 				for (EventType type : option.getTypes()) {
 					if (type == event.getType()) {   //check 된것만 프린트
 						result.add(event);
-						break;0
+						break;
 					}
 				}
 			}
