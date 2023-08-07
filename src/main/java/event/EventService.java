@@ -46,5 +46,11 @@ public class EventService {
 		return eventMap.get(eventId);
 	}
 	
+	public List<Event> getRecommendedEventService() {
+		List<Event> recommendList = new ArrayList<Event>();
+		recommendList.add(eventMap.get(1L));
+		recommendList.add(eventMap.get(2L));
+		return recommendList;
 
+	}
 }

@@ -19,7 +19,7 @@ import member.NotMatchPasswordException;
 public class MemberService {
 
 	private int nextMemberId = 0;
-	private Map<String, MemberInfo> memberMap = new HashMap<String, MemberInfo>();
+	public Map<String, MemberInfo> memberMap = new HashMap<String, MemberInfo>();
 
 	public MemberService() {
 		memberMap.put("m1", new MemberInfo("m1", "이상화", "sanghwa@sanghwa.com", "sanghwa", false, new Address()));

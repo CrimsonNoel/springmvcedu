@@ -25,7 +25,7 @@
 추천 이벤트:
 <ul>
 	<c:forEach var="event" items="${recEventList}">
-	<li><a href="<%=request.getContextPath() %>/event/detail?id=${event.id}">${event.name}</a></li>
+	<li>:<a href="<%=request.getContextPath() %>/event/detail?id=${event.id}">${event.name}</a></li>
 	</c:forEach>
 </ul>
 </body>
