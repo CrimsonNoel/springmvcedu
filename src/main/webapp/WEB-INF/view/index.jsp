@@ -7,8 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	spring start
-
+	
+spring start  ${auth}
 	<ul>
 		<li>Hello====
 		<li><a href="${pageContext.request.contextPath}/hello.do">hello.do</a></li>
@@ -69,12 +69,33 @@
 	<li><a href="<%=request.getContextPath() %>/acl/list">/acl/list</a>
 	: 커맨드 객체 리스트 처리, AclController
 	</li>	
+	<li><a href="<%=request.getContextPath() %>/auth/login">/auth/login</a>:
+	 LoginController</li>
 	
 	
+	<li><a href="<%=request.getContextPath() %>/member/modify?mid=m1">
+					/member/modify?mid=m1</a>
+			: GET/POST에서 동일 타입 커맨드 객체 사용하기, MemberModificationController</li>
+			
+	<li><a href="<%=request.getContextPath() %>/event/list">/event/list</a>:
+		 @ModelAttribute를 이용한 공통 모델, EventController.recommend()</li>
 	</ul>
 
+<li>파일 업로드:
+	<ul>
+	<li><a href="<%=request.getContextPath() %>/upload/form">/upload/form</a>: 
+	파일 업로드 폼, UploadController</li>
+	</ul>
+</li>
 
-
+<li>JSON
+	<ul>
+	<li><a href="<%=request.getContextPath() %>/json/list">/json/list</a>: json , JsonController</li>
+	<li><a href="<%=request.getContextPath() %>/json/map">/json/map</a>: json , JsonController</li>
+	<li><a href="<%=request.getContextPath() %>/rest/list">/rest/list</a>: json , RestJsonController</li>
+	<li><a href="<%=request.getContextPath() %>/rest/map">/rest/map</a>: json , RestJsonController</li>
+	</ul>
+</li>
 
 
 

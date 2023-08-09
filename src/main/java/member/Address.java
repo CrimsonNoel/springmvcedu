@@ -1,9 +1,11 @@
 package member;
 
-
+//import org.hibernate.validator.constraints.NotEmpty;
 
 public class Address {
+	//@NotEmpty
 	private String address1;
+	//@NotEmpty
 	private String address2;
 	private String zipcode;
 	

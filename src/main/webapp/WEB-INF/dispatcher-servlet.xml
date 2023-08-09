@@ -11,17 +11,19 @@
        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 	<mvc:annotation-driven />
-	<context:component-scan base-package="controller, service"/>
-	<context:annotation-config/>
-	<mvc:view-controller path="/index"  view-name="index" />
+	<context:component-scan
+		base-package="controller, service" />
+	<context:annotation-config />
+	<mvc:view-controller path="/index"
+		view-name="index" />
 
-     <bean id="viewResolver"
+	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/view/" />
 		<property name="suffix" value=".jsp" />
-	</bean>	 
-	  
-     <bean id="messageSource"
+	</bean>
+
+	<bean id="messageSource"
 		class="org.springframework.context.support.ResourceBundleMessageSource">
 		<property name="basenames">
 			<list>
@@ -30,5 +32,24 @@
 		</property>
 		<property name="defaultEncoding" value="UTF-8" />
 	</bean>
-    
+
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/acl/**" />
+			<bean class="service.AdminInterceptor" />
+		</mvc:interceptor>
+		<bean class="service.MeasuringInterceptor" /> 
+		<mvc:interceptor>
+			<mvc:mapping path="/members/m2" />
+			<mvc:mapping path="/files/**" />
+			<ref bean="login" />
+		</mvc:interceptor>
+	</mvc:interceptors>
+	<bean id="login" class="service.LoginInterceptor" />
+  
+   <bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="defaultEncoding" value="utf-8" />
+	</bean> 
+
 </beans>

@@ -12,7 +12,7 @@ import ac.AccessPerm;
 import ac.AclModRequest;
 
 
-
+@Service
 public class AclService {
 	
 	private SortedMap<String, AccessPerm> map = new TreeMap<String, AccessPerm>();
